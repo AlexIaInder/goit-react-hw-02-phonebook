@@ -17,10 +17,13 @@ const ContactList = ({ contacts, deleteContact }) => (
   </ul>
 );
 ContactList.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.number,
-  id: PropTypes.number,
   deleteContact: PropTypes.func,
-  contacts: PropTypes.object,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      number: PropTypes.number,
+      id: PropTypes.string,
+    })
+  ),
 };
 export default ContactList;
