@@ -21,5 +21,6 @@ ContactList.propTypes = {
   number: PropTypes.number,
   id: PropTypes.number,
   deleteContact: PropTypes.func,
+  contacts: PropTypes.object,
 };
 export default ContactList;
